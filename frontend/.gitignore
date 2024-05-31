@@ -1,0 +1,22 @@
+# Ignore system and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore sensitive or environment-specific files
+.env
+config.json
+
+# Ignore logs
+*.log
