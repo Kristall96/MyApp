@@ -1,7 +1,8 @@
 // src/components/Dashboard.jsx
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Router, useNavigate } from "react-router-dom";
+import Profile from "./subComponents/Profile";
 
 const Dashboard = () => {
   return (
@@ -45,7 +46,9 @@ const Dashboard = () => {
               </li>
             </ul>
           </div>
-          <div className="border border-white rounded"></div>
+          <div className="border border-white rounded">
+            <Profile />
+          </div>
         </div>
       </div>
     </div>
