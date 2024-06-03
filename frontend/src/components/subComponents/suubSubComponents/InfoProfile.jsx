@@ -10,7 +10,7 @@ const Profile = ({ userId }) => {
 
   useEffect(() => {
     if (userId) {
-      fetch(`http://localhost:5000/api/users/${userId}`)
+      fetch(`http://localhost:3000/api/users/${userId}`)
         .then((response) => response.json())
         .then((data) => {
           setUser(data);
@@ -30,7 +30,7 @@ const Profile = ({ userId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/api/users/${userId}`, {
+    fetch(`http://localhost:3000/api/users/${userId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

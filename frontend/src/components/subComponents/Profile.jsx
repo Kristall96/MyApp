@@ -8,25 +8,67 @@ const Profile = () => {
       <div>
         <ul className="flex gap-2">
           <li className="fle x border rounded border-black p-2 m-2">
-            <a href="#">Info</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu1");
+              }}
+            >
+              Info
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">Achivements</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu2");
+              }}
+            >
+              Achivements
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">Img Gallery</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu3");
+              }}
+            >
+              Img Gallery
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">More</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu4");
+              }}
+            >
+              Img Gallery
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">More</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu5");
+              }}
+            >
+              Img Gallery
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">More</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu6");
+              }}
+            >
+              Img Gallery
+            </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
-            <a href="#">More</a>
+            <button
+              onClick={() => {
+                setActiveMenu("Menu7");
+              }}
+            >
+              Img Gallery
+            </button>
           </li>
         </ul>
         <div></div>

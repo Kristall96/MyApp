@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InfoProfile from "./suubSubComponents/InfoProfile";
 
-const Express = () => {
+const MongoDB = () => {
   return (
     <div>
       <div>
@@ -13,7 +13,7 @@ const Express = () => {
                 setActiveMenu("Menu1");
               }}
             >
-              Express
+              MongoDB
             </button>
           </li>
           <li className="flex border rounded border-black p-2 m-2">
@@ -78,4 +78,4 @@ const Express = () => {
   );
 };
 
-export default Express;
+export default MongoDB;

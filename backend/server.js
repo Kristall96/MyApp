@@ -33,7 +33,7 @@ app.use("/api/items", itemRoutes);
 // Routes
 app.get("/api/users/:id", async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await user.findById(req.params.id);
     if (!user) return res.status(404).json({ error: "User not found" });
     res.json(user);
   } catch (err) {
@@ -43,7 +43,7 @@ app.get("/api/users/:id", async (req, res) => {
 
 app.put("/api/users/:id", async (req, res) => {
   try {
-    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+    const user = await user.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     if (!user) return res.status(404).json({ error: "User not found" });
