@@ -1,7 +1,6 @@
 // src/components/Dashboard.jsx
 import React, { useState } from "react";
-import axios from "axios";
-import { Router, useNavigate } from "react-router-dom";
+
 import Profile from "./subComponents/Profile";
 import React1 from "./subComponents/React";
 import NodeJs from "./subComponents/NodeJs";
@@ -11,8 +10,17 @@ import Express from "./subComponents/Express";
 import Css from "./subComponents/Css";
 import English from "./subComponents/English";
 import MongoDB from "./subComponents/MongoDB";
+import Speach from "./subComponents/sideBarComponenets/Speach1";
+import Voice from "./subComponents/sideBarComponenets/Voice1";
+import SentenceStructure from "./subComponents/sideBarComponenets/SentenceStructure";
+import Tenses from "./subComponents/sideBarComponenets/Tenses";
+import Agreement from "./subComponents/sideBarComponenets/Agreement";
+import Modifiers from "./subComponents/sideBarComponenets/Modifiers";
+import SentenceType from "./subComponents/sideBarComponenets/SentenceTypes";
+import Punctuation from "./subComponents/sideBarComponenets/Punctuation";
 const Dashboard = () => {
   const [activeMenu, setActiveMenu] = useState("Profile");
+  const [activeSideMenu, setActiveSideMenu] = useState("");
 
   const renderContent = () => {
     switch (activeMenu) {
@@ -38,6 +46,31 @@ const Dashboard = () => {
         return <Profile />;
     }
   };
+  const renderSideContent = () => {
+    switch (activeMenu) {
+      case "Profile":
+        return <Profile />;
+      case "English":
+        return <English />;
+      case "Html":
+        return <Html />;
+      case "Css":
+        return <Css />;
+      case "NodeJs":
+        return <NodeJs />;
+      case "Express":
+        return <Express />;
+      case "JavaScript":
+        return <JavaScript />;
+      case "React1":
+        return <React1 />;
+      case "MongoDB":
+        return <MongoDB />;
+      default:
+        return <Profile />;
+    }
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-indigo-800">
       <div className="w-4/5 h-30 border border-white rounded">
@@ -132,8 +165,12 @@ const Dashboard = () => {
           </div>
           <div className="border border-white rounded">
             <h1>My Menu</h1>
-            <Profile setActiveMenu={setActiveMenu} />
+            {/* <Profile setActiveMenu={setActiveMenu} /> */}
             <div className="content">{renderContent()}</div>
+          </div>
+          <div className="border border-red rounded">
+            <h1>welcome to the sidebar</h1>
+            <div className="sideContent">{renderSideContent()}</div>
           </div>
         </div>
       </div>
